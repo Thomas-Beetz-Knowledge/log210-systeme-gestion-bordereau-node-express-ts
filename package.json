@@ -17,7 +17,7 @@
         "clean": "rimraf dist/* & npm run docs & npm run tplant",
         "compile": "npm run compile:ts",
         "compile:ts": "tsc --outDir ./dist --module commonjs --downlevelIteration ./src/index.ts",
-        "postcompile": "cp -R src/data dist/data && cp src/model/model/MDD.svg dist/docs & npm run madge & cp madge.png dist/docs"
+        "postcompile": "copy -R src/data dist/data && copy src/model/model/MDD.svg dist/docs & npm run madge & copy madge.png dist/docs"
     },
     "watch": {
         "test": "{src,tests}/*.js"
@@ -52,7 +52,9 @@
         "typescript": "^4.4.3"
     },
     "dependencies": {
+        "cp": "^0.2.0",
         "express": "^4.17.1",
+        "graphviz": "0.0.9",
         "md5": "^2.3.0",
         "morgan": "^1.10.0",
         "multimap": "^1.1.0",
