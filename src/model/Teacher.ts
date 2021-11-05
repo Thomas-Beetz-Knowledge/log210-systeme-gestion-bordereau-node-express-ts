@@ -20,7 +20,8 @@ export class Teacher  {
   }
  
   static all() {
-    let teachers: TeacherJSON[] = require('../data/teachers.json');
+    var teachers: TeacherJSON[] = require('../data/teachers.json');
+
     return teachers;
   }
 }
